@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/vincent/Documents/programmiersprachen/programmiersprachen-helloworld/external/catch-1.4.0 
+CXX_INCLUDES = -I/home/vincent/Documents/programmiersprachen/programmiersprachen-aufgabe-1/external/catch-1.4.0 
 

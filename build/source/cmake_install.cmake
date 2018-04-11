@@ -1,4 +1,4 @@
-# Install script for directory: /home/vincent/Documents/programmiersprachen/programmiersprachen-helloworld/source
+# Install script for directory: /home/vincent/Documents/programmiersprachen/programmiersprachen-aufgabe-1/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
