@@ -101,14 +101,6 @@ TEST_CASE("describe_is_prime","[is_prime]"){
   REQUIRE(is_prime(4) == FALSE);
 }
 
-double mileToKilometer(double m){
-  return double km = m/0.6213;
-}
-
-TEST_CASE("describe_mileToKilometer","[mileToKilometer]"){
-  REQUIRE(mileToKilometer(1) == 1.60934708789); //read up on approx!
-}
-
 int main(int argc, char* argv[])
 {
   return Catch::Session().run(argc, argv);

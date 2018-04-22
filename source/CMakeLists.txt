@@ -4,4 +4,5 @@ add_executable(helloworld helloworld.cpp)
 add_executable(tests tests.cpp)
 
 # Kommentieren Sie die folgenden Zeilen für die Aufgabe `mileToKilometer` aus
-#add_executable(mileToKilometer mileToKilometer.cpp)
+add_executable(mileToKilometer mileToKilometer.cpp)
+#were we supposed remove the comment symbol so this line gets read again?
