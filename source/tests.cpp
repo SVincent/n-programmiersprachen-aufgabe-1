@@ -52,6 +52,14 @@ double surfaceCyl(double r, double h){
   return double surface = 2*M_PI*r*(r+h);
 }
 
+double volumeCyl(double r, double h){
+  return double volume = M_PI*(r*r)*h;
+}
+
+TEST_CASE("describe_volumeCyl","[volumeCyl]"){
+  //need to check up on Approx to implement this test?
+}
+
 int main(int argc, char* argv[])
 {
   return Catch::Session().run(argc, argv);
