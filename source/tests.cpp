@@ -40,6 +40,14 @@ TEST_CASE("describe_checksum" , "[checksum]"){
   REQUIRE(checksum(0) == 0);
 }
 
+double fract(double x){
+  return double result = x-(int(x);
+}
+
+TEST_CASE("describe_fract","[fract]"){
+  REQUIRE(e == Approx(d)); //unclear what approx is needed for or what it even does
+}
+
 int main(int argc, char* argv[])
 {
   return Catch::Session().run(argc, argv);
