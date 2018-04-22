@@ -60,6 +60,20 @@ TEST_CASE("describe_volumeCyl","[volumeCyl]"){
   //need to check up on Approx to implement this test?
 }
 
+int factorial(int f){
+  int result = 1;
+  for (int i=f; i>0; i--){
+    result = result*i;
+  }
+  return result;
+}
+
+TEST_CASE("describe_factorial","[factorial]"){
+  REQUIRE(factorial(0) == 1);
+  REQUIRE(factorial(1) == 1);
+  REQUIRE(factorial(10) == 3628800);
+}
+
 int main(int argc, char* argv[])
 {
   return Catch::Session().run(argc, argv);
