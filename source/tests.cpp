@@ -74,6 +74,16 @@ TEST_CASE("describe_factorial","[factorial]"){
   REQUIRE(factorial(10) == 3628800);
 }
 
+int binomial(int n, int k){
+  return int result = (factorial(n))/((factorial(k)*(factorial(n-k))));
+}
+
+TEST_CASE("describe_binomial","[binomial]"){
+  REQUIRE(binomial(0,0) == 1);
+  REQUIRE(binomial(1,1) == 1);
+  REQUIRE(binomial(20,10) == 184756);
+}
+
 int main(int argc, char* argv[])
 {
   return Catch::Session().run(argc, argv);
