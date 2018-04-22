@@ -48,6 +48,10 @@ TEST_CASE("describe_fract","[fract]"){
   REQUIRE(e == Approx(d)); //unclear what approx is needed for or what it even does
 }
 
+double surfaceCyl(double r, double h){
+  return double surface = 2*M_PI*r*(r+h);
+}
+
 int main(int argc, char* argv[])
 {
   return Catch::Session().run(argc, argv);
