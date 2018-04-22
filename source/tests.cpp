@@ -84,6 +84,23 @@ TEST_CASE("describe_binomial","[binomial]"){
   REQUIRE(binomial(20,10) == 184756);
 }
 
+bool is_prime(int p){
+  int divisors = 0;
+  for (int i = 1; i<=p; i++){
+    if (p%i == 0){
+      divisors++;
+    }
+  }
+  return (divisors == 2); //if p only has two divisors (1 and p), it's prime, otherwise not.
+}
+
+TEST_CASE("describe_is_prime","[is_prime]"){
+  REQUIRE(is_prime(2) == TRUE);
+  REQUIRE(is_prime(3) == TRUE);
+  REQUIRE(is_prime(1) == FALSE);
+  REQUIRE(is_prime(4) == FALSE);
+}
+
 int main(int argc, char* argv[])
 {
   return Catch::Session().run(argc, argv);
