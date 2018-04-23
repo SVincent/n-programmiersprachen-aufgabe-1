@@ -6,7 +6,7 @@ int main(){
   return 0;
 }
 
-int[8] bruteforcefactorization(int number){ //c++ doesn't allow return type of array? should I use a pointer?
+void bruteforcefactorization(int number){ //c++ doesn't allow return type of array? should I use a pointer? want to return int[8]
   int primessmallertwenty [8] = {2,3,5,7,11,13,17,19}; //hardcoded prime numbers in our range
   //every number we check gets its own array, with the cells corresponding to the prime numbers in primessmallertwenty[]
   int factors [8] = {0,0,0,0,0,0,0,0};
@@ -20,7 +20,8 @@ int[8] bruteforcefactorization(int number){ //c++ doesn't allow return type of a
     }
   }
   //at the end of this for-loop factors should include all prime factors of the number we checked
-  return factors;
+  //return factors;
+  std::cout << "the factors of are " << factors << std:endl;
 }
 
 void lowestcommondenominatorRange(int low, int high){
@@ -30,7 +31,8 @@ void lowestcommondenominatorRange(int low, int high){
   int primessmallertwenty [8] = {2,3,5,7,11,13,17,19}; //hardcoded prime numbers in our range
   for (int i = low; i < high; ++i) {
     //for every number in our range we calculate their prime factors and store the result in a temporary variable
-    int templcd [8] = bruteforcefactorization(i);
+    //int templcd [8] = bruteforcefactorization(i);
+    int templcd [8] = {0,0,0,0,0,0,0,0}; //hardcode the numbers from bruteforcefactorization for the time being until I figure out how to return an array 
     for (int j = 0; j < 8; ++j) {
     //we then update the lcd array with the highest amount a prime number was used in the factorization
     //the result is a collection of prime numbers which can be used to factorize every single number in our range
