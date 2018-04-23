@@ -1,5 +1,8 @@
 #include <iostream>
 #include <algorithm>    // std::max
+#include <cmath>
+
+using namespace std;
 
 int main(){
   std::cout << "Hello, World!\n";
@@ -21,7 +24,7 @@ void bruteforcefactorization(int number){ //c++ doesn't allow return type of arr
   }
   //at the end of this for-loop factors should include all prime factors of the number we checked
   //return factors;
-  std::cout << "the factors of are " << factors << std:endl;
+  std::cout << "the factors of are " << factors << std::endl;
 }
 
 void lowestcommondenominatorRange(int low, int high){
@@ -39,6 +42,7 @@ void lowestcommondenominatorRange(int low, int high){
     lcd[j] = max(lcd[j],templcd[j]);
     }
   }
+
   int result = 1; //since the lowest common denominator is calculated by multiplying all prime factors, we need to initialize our result with the neutral element of multiplication
   for (int k = 0; k < 8; ++k) {
     while(lcd[k]>0){

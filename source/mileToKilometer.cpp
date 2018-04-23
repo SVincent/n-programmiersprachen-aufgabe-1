@@ -3,11 +3,12 @@
 #include <catch.hpp>
 
 double mileToKilometer(double m){
-  return double km = m/0.6213;
+  double km = m/0.6213;
+  return km;
 }
 
 TEST_CASE("describe_mileToKilometer","[mileToKilometer]"){
-  REQUIRE(mileToKilometer(1) == 1.60934708789); //read up on approx!
+  REQUIRE(mileToKilometer(1) == Approx(1.60934708789).epislon(0.00000000001));; //read up on approx!
 }
 
 int main(){
